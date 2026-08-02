@@ -1,17 +1,38 @@
 aid: trumid
 name: Trumid
-description: 'Trumid is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Trumid is a New York-based financial technology company and electronic
+  trading platform for the corporate bond market, operating an SEC-registered Alternative
+  Trading System (ATS) through Trumid Financial, LLC. The platform covers U.S. dollar-denominated
+  Investment Grade, High Yield, Distressed and Emerging Market credit, and delivers
+  a suite of protocols in a single application — Request-for-Quote (RFQ), Trumid Auto-Pilot,
+  Attributed Trading, Portfolio Trading and Swarms — alongside Full Self Trading (FST)
+  automation. Its data and analytics line, built on the Fair Value Market Price (FVMP)
+  predictive pricing model, publishes continuous prices for roughly 22,000 U.S. dollar-denominated
+  corporate bonds refreshed every 30 seconds, plus liquidity scores, confidence scores
+  and the Bond Neighborhood similarity model. Client integration is institutional rather
+  than self-service: connectivity runs over FIX through a network of OMS/EMS partners,
+  and Trumid Data Solutions is delivered via real-time feeds, SFTP file delivery and
+  a Trumid Excel Add-in. There is no public developer portal, no public REST/OpenAPI
+  surface and no self-service signup — onboarding runs through the Trumid Integration
+  and Product Support team.'
 url: https://raw.githubusercontent.com/api-evangelist/trumid/refs/heads/main/apis.yml
+image: https://www.trumid.com/wp-content/uploads/2025/05/Logo.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-02'
 modified: '2026-08-02'
 tags:
 - Company
+- Financial Services
+- Capital Markets
+- Fixed Income
+- Bond Trading
+- Electronic Trading
+- Market Data
+- Analytics
+- FIX Protocol
+- Broker Dealer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,42 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/trumid-domain-security.yml
 - type: Website
+  url: https://www.trumid.com/
+- type: Support
+  url: https://www.trumid.com/client-center/#support
+- type: SignUp
+  url: https://www.trumid.com/get-started/
+- type: Blog
+  url: https://www.trumid.com/news/
+- type: GitHubOrganization
+  url: https://github.com/Trumid
+- type: TermsOfService
+  url: https://info.trumid.com/hubfs/Data%20License%20and%20Service%20Terms/Trumid%20Data%20License%20and%20Service%20Terms.pdf
+- type: PrivacyPolicy
+  url: https://6645966.fs1.hubspotusercontent-na1.net/hubfs/6645966/Legal/Trumid%20Privacy%20Policy%20(2025).pdf
+- type: Compliance
+  url: https://www.trumid.com/legal-and-regulatory/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/trumid/
+- type: Careers
+  url: https://www.trumid.com/about-us/careers/
+- type: LLMsTxt
+  url: llms/trumid-llms.txt
+- type: Packages
+  url: packages/trumid-packages.yml
+- type: Conformance
+  url: conformance/trumid-conformance.yml
+- type: Lifecycle
+  url: lifecycle/trumid-lifecycle.yml
+- type: Integrations
+  url: integrations/_index.yml
+- type: SecondaryMarket
   url: https://forgeglobal.com/trumid_stock/
+x-enrichment:
+  date: '2026-08-02'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1

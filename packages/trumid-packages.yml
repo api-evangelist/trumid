@@ -1,0 +1,61 @@
+generated: '2026-08-02'
+method: searched
+source: https://github.com/Trumid + https://www.trumid.com/client-center/
+note: >-
+  Trumid publishes no client SDK for a Trumid API — there is no public REST/OpenAPI
+  surface to wrap. What it does distribute is (a) one open-source FIX engine binding
+  maintained in its GitHub org, and (b) installable desktop/Excel client software
+  from the Client Center. No `SDKs` pointer is wired in apis.yml: node-quickfix is a
+  general-purpose QuickFIX wrapper, not a Trumid API client library, and wiring the
+  SDK check off it would misrepresent the surface.
+registries_probed:
+- registry: npm
+  query: trumid
+  results: 0
+- registry: pypi
+  query: trumid
+  status: 404
+packages:
+- language: javascript
+  registry: npm
+  name: node-quickfix
+  url: https://www.npmjs.com/package/node-quickfix
+  repository: https://github.com/Trumid/node-quickfix
+  version: 2.1.1
+  install: npm install node-quickfix
+  official: true
+  first_party_note: >-
+    Repository is owned by the Trumid GitHub organization; the npm package is
+    published under the `electronifie` maintainer account (Electronifie was acquired
+    by Trumid in 2017). It is a Node.js/C++ binding for the QuickFIX FIX engine, not
+    a Trumid API client.
+  kind: fix-engine-binding
+  stars: 78
+downloads:
+- name: Trumid App
+  kind: desktop-client
+  formats:
+  - format: ClickOnce
+    url: https://www.trumid.com/client-center/#app-download
+  - format: MSI
+    url: https://www.trumid.com/wp-content/uploads/TrumidMarketCenter.msi
+    http_status: 200
+    last_modified: '2026-07-10'
+  - format: ZIP
+    url: https://www.trumid.com/wp-content/uploads/TrumidMarketCenter.zip
+    http_status: 200
+    last_modified: '2026-07-10'
+  official: true
+- name: Trumid Excel Add-in
+  kind: excel-add-in
+  version: 4.18.1.1
+  architecture: x64
+  format: MSI
+  url: https://www.trumid.com/wp-content/uploads/TrumidExcelSetup_4.18.1.1_x64.msi
+  http_status: 200
+  last_modified: '2026-07-10'
+  description: >-
+    Integrates Trumid pricing and liquidity data (including FVMP) into Excel
+    spreadsheets; one of the three documented delivery channels for Trumid Data
+    Solutions alongside real-time feeds and SFTP file delivery.
+  official: true

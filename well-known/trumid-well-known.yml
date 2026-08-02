@@ -1,0 +1,46 @@
+generated: '2026-08-02'
+method: probed
+source: live probes of https://www.trumid.com/.well-known/*
+host: https://www.trumid.com
+note: >-
+  Every /.well-known/ path probed on the Trumid web host returned 404 (the WordPress
+  404 template, not a document). No API host exists to probe: api.trumid.com,
+  developer.trumid.com, docs.trumid.com, developers.trumid.com, status.trumid.com
+  and trust.trumid.com do not resolve in DNS. Absence is recorded here as valid
+  probe data; no WellKnown or SecurityTxt pointer is wired in apis.yml because no
+  document was found.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+other_probes:
+- path: /openapi.json
+  status: 404
+- path: /llms.txt
+  status: 200
+  file: ../llms/trumid-llms.txt
+- path: /robots.txt
+  status: 200
+- path: /sitemap_index.xml
+  status: 200
+unresolved_hosts:
+- api.trumid.com
+- developer.trumid.com
+- developers.trumid.com
+- docs.trumid.com
+- status.trumid.com
+- trust.trumid.com
+- app.trumid.com
+- fix.trumid.com
+- portal.trumid.com

@@ -1,0 +1,61 @@
+generated: '2026-08-02'
+method: searched
+source: https://www.trumid.com/legal-and-regulatory/
+docs: https://www.trumid.com/legal-and-regulatory/
+note: >-
+  Trumid is a regulated U.S. broker-dealer operating an SEC-registered Alternative
+  Trading System, so its published conformance posture is regulatory rather than
+  developer-facing. No SOC 2 / ISO 27001 report, trust center, or security
+  certification page was found on any Trumid host. Technical conformance is limited
+  to FIX, which is the documented client connectivity protocol (Client Center
+  publishes "FIX User Guides", though the link is not publicly resolvable and the
+  guides are distributed to onboarded clients).
+standards:
+- id: fix-protocol
+  conforms: true
+  evidence: >-
+    Client Center publishes FIX User Guides for onboarded clients; Trumid maintains
+    the open-source node-quickfix QuickFIX binding at github.com/Trumid/node-quickfix;
+    MultiLynq integration press release describes "simplifying FIX onboarding" for
+    Trumid RFQ and Attributed Trading.
+  public_spec: false
+- id: sec-ats
+  conforms: true
+  evidence: 'Trumid Financial, LLC operates an Alternative Trading System (ATS)
+    registered with the SEC.'
+- id: finra-member
+  conforms: true
+  evidence: 'Trumid Financial, LLC is a FINRA member broker-dealer (FINRA BrokerCheck
+    linked from the Legal & Regulatory page).'
+- id: msrb-member
+  conforms: true
+  evidence: 'Member of the Municipal Securities Rulemaking Board (MSRB).'
+- id: sipc-member
+  conforms: true
+  evidence: 'Member of the Securities Investor Protection Corporation (SIPC).'
+- id: cftc-nfa
+  conforms: true
+  evidence: 'CFTC-registered Introducing Broker and NFA member, NFA ID #0502987.'
+- id: gdpr
+  conforms: true
+  evidence: >-
+    Legal & Regulatory page carries a dedicated GDPR section for EU/EEA clients
+    stating the legal bases for processing personal data.
+- id: oauth2
+  conforms: false
+  evidence: 'No public OAuth surface; no /.well-known/oauth-authorization-server.'
+- id: openapi
+  conforms: false
+  evidence: 'No OpenAPI/Swagger document found on any Trumid host (see well-known/trumid-well-known.yml).'
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: 'No public HTTP API surface to evaluate.'
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: '/.well-known/security.txt returns 404.'
+- id: a2a-agent-card
+  conforms: false
+  evidence: '/.well-known/agent-card.json and /.well-known/agent.json both return 404.'
+- id: llms-txt
+  conforms: true
+  evidence: 'https://www.trumid.com/llms.txt returns 200 (Yoast SEO v28.0 generated).'

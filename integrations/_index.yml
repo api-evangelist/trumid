@@ -1,0 +1,118 @@
+generated: '2026-08-02'
+method: searched
+source: https://www.trumid.com/trading-platform/network-partners/
+note: >-
+  Trumid's integration surface is its Network Partners program — OMS/EMS, IMS and
+  data vendors that connect their clients to Trumid liquidity, in practice over FIX.
+  Every entry here is LISTING-ONLY: Trumid publishes no OpenAPI of its own, so no
+  2-source Arazzo workflow can be authored without fabricating operations on the
+  Trumid side. `arazzo: null` / `status: pending-provider-spec` is the honest state.
+  `network_match` records whether the partner already has an api-evangelist repo.
+status: listing-only
+integrations:
+- slug: adroit
+  label: Adroit
+  partner: Adroit Trading Technologies
+  category: ems
+  use_case: EMS for fixed income cash and OTC derivatives; open APIs for implementation
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+- slug: charles-river
+  label: Charles River
+  partner: Charles River Development, A State Street Company
+  category: ims
+  use_case: Investment management system (IMS) order and execution workflow
+  arazzo: null
+  network_match: all/state-street
+  status: pending-provider-spec
+- slug: enfusion
+  label: Enfusion
+  partner: Enfusion
+  category: ims
+  use_case: Investment management SaaS platform
+  arazzo: null
+  network_match: all/enfusion
+  status: pending-provider-spec
+- slug: fabkom
+  label: Fabkom
+  partner: Fabkom
+  category: oms
+  use_case: Municipal bond trading systems
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+- slug: flextrade
+  label: FlexTrade Systems
+  partner: FlexTrade Systems
+  category: ems
+  use_case: Multi-asset execution and order management
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+- slug: ice
+  label: Intercontinental Exchange (ICE)
+  partner: Intercontinental Exchange
+  category: data
+  use_case: Financial technology and data services
+  arazzo: null
+  network_match: all/ice
+  status: pending-provider-spec
+- slug: investortools
+  label: Investortools
+  partner: Investortools
+  category: oms
+  use_case: Fixed-income portfolio, order and execution management SaaS
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+- slug: liquiditybook
+  label: LiquidityBook
+  partner: LiquidityBook
+  category: oms
+  use_case: Buy- and sell-side trading solutions
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+- slug: multilynq
+  label: MultiLynq
+  partner: MultiLynq
+  category: connectivity
+  use_case: >-
+    FIX connectivity and onboarding to U.S. electronic trading venues; integration
+    covers Trumid RFQ and Attributed Trading
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+  announcement: https://www.trumid.com/news/2024/trumid-multilynq-announce-integration-of-trumid-fixed-income-trading-protocols/
+- slug: ssc-eze
+  label: SS&C Eze
+  partner: SS&C Eze
+  category: oms
+  use_case: Trade order management and execution platform
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+- slug: tradewell
+  label: Tradewell
+  partner: Tradewell Technologies
+  category: workflow-automation
+  use_case: Fixed-income trading workflow automation
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+- slug: ts-imagine
+  label: TS Imagine
+  partner: TS Imagine
+  category: ems
+  use_case: >-
+    Electronic front-office trading and portfolio management; expanded 2026 to add
+    Trumid RFQ automation and Trumid Full Self Trading (FST)
+  arazzo: null
+  network_match: null
+  status: pending-provider-spec
+  announcement: https://www.trumid.com/news/2026/ts-imagine-expands-integration-with-trumids-fixed-income-trading-platform/
+coverage:
+  partners_listed: 12
+  arazzo_authored: 0
+  reason: Trumid publishes no OpenAPI; no provider-side operations exist to bind

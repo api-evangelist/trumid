@@ -1,0 +1,38 @@
+generated: '2026-08-02'
+method: searched
+source: https://www.trumid.com/client-center/
+note: >-
+  Trumid ships a versioned desktop/Excel client rather than a versioned public API.
+  No public status page (status.trumid.com does not resolve), no published
+  deprecation or sunset policy, and no public SLA were found — so no StatusPage or
+  Deprecation pointer is wired in apis.yml. Client software is distributed from the
+  Client Center and updated in place (ClickOnce), with support routed through the
+  Integration and Product Support team.
+versioning:
+  scheme: client-build
+  applies_to: desktop and Excel client software
+  current:
+    trumid_excel_add_in: 4.18.1.1
+  docs: https://www.trumid.com/client-center/
+  api_versioning: none-published
+distribution:
+  channel: https://www.trumid.com/client-center/#app-download
+  update_mechanism: ClickOnce (auto-update) plus MSI/ZIP installers
+  last_observed_publish: '2026-07-10'
+deprecation:
+  policy_url: null
+  sunset_header: null
+  observed: false
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+support:
+  email: team@trumid.com
+  scope: onboarding, functionality, troubleshooting
+  page: https://www.trumid.com/client-center/#support
+release_communication:
+  channel: https://www.trumid.com/news/
+  kind: press releases and thought leadership, not a dated product changelog
+  claim: 'Technology page states 750+ functionality enhancements and new features
+    were delivered to the platform in 2025, one-third driven by client feedback.'
