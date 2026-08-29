@@ -16,6 +16,17 @@ description: 'Trumid is a New York-based financial technology company and electr
   surface and no self-service signup — onboarding runs through the Trumid Integration
   and Product Support team.'
 url: https://raw.githubusercontent.com/api-evangelist/trumid/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.trumid.com/wp-content/uploads/2025/05/Logo.png
 x-type: company
 x-source: harvest:secondary-market
