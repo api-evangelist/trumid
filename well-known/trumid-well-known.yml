@@ -2,28 +2,11 @@ generated: '2026-08-02'
 method: probed
 source: live probes of https://www.trumid.com/.well-known/*
 host: https://www.trumid.com
-note: >-
-  Every /.well-known/ path probed on the Trumid web host returned 404 (the WordPress
-  404 template, not a document). No API host exists to probe: api.trumid.com,
-  developer.trumid.com, docs.trumid.com, developers.trumid.com, status.trumid.com
-  and trust.trumid.com do not resolve in DNS. Absence is recorded here as valid
-  probe data; no WellKnown or SecurityTxt pointer is wired in apis.yml because no
-  document was found.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-- path: /.well-known/agent-card.json
-  status: 404
-- path: /.well-known/agent.json
-  status: 404
+note: 'Every /.well-known/ path probed on the Trumid web host returned 404 (the WordPress 404 template,
+  not a document). No API host exists to probe: api.trumid.com, developer.trumid.com, docs.trumid.com,
+  developers.trumid.com, status.trumid.com and trust.trumid.com do not resolve in DNS. Absence is recorded
+  here as valid probe data; no WellKnown or SecurityTxt pointer is wired in apis.yml because no document
+  was found.'
 other_probes:
 - path: /openapi.json
   status: 404
@@ -44,3 +27,25 @@ unresolved_hosts:
 - app.trumid.com
 - fix.trumid.com
 - portal.trumid.com
+hosts:
+- host: https://www.trumid.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
